@@ -13,7 +13,6 @@ class AppointmentController extends Controller
         $work_date = $request->work_date;
 
         $appointment = null;
-
         if ($work_date) {
             $appointment = Appointment::where('person_no', $person_no)
                 ->where('work_date', $work_date)
